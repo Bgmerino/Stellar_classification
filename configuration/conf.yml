@@ -1,0 +1,30 @@
+
+### Path for data
+data:
+  train : 'data/star_classification.csv'
+  test: ''
+
+### Parameters to run the model
+model:
+  no_variables: ['obj_ID','field_ID','class','cam_col','run_ID','rerun_ID','spec_obj_ID','plate','MJD','fiber_ID']
+  nan_value: -9999
+  categories: ['STAR','GALAXY','QSO']
+  algorithm: 'RandomForestClassifier' ## SVM
+  saving_model: 'True'
+  ref_model: 'RandomForestClassifier_20250607'
+
+### Hyperparameters of the different models available
+parameters:
+  RF:
+    threes: 50
+    max_depth: 15
+    min_samples: 10
+  SVM:
+    kernel: 'rbf'
+    shape: 'ovo'
+
+
+
+
+
+
